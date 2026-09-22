@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio Frontend // Módulo 07: Consumo de APIs</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts & Font Awesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Cabeçalho Principal -->
+    <header class="main-header">
+        <div class="header-container">
+            <h1><i class="fa-solid fa-code-compare"></i> Módulo 07: Consumo de APIs</h1>
+            <p>Exercícios práticos de integração assíncrona utilizando Fetch API, validação e manipulação de DOM.</p>
+        </div>
+    </header>
+
+    <main class="dashboard-container">
+
+        <!-- EXERCÍCIO 1: Fetch de dados e exibição rápida -->
+        <section class="card">
+            <div class="card-header">
+                <span class="badge">Exercício 01</span>
+                <h2>Fato Aleatório de Gatos (Fetch API)</h2>
+            </div>
+            <div class="card-body">
+                <p class="description">Busca informações em tempo real de uma API pública externa usando `fetch` e `async/await`.</p>
+                <div id="catFactBox" class="data-display-box">
+                    Clique no botão abaixo para carregar um fato...
+                </div>
+                <button id="btnFetchFact" class="btn btn-primary">
+                    <i class="fa-solid fa-rotate-right"></i> Buscar Fato
+                </button>
+            </div>
+        </section>
+
+        <!-- EXERCÍCIO 2: Lista de Usuários consumida via JSON -->
+        <section class="card">
+            <div class="card-header">
+                <span class="badge">Exercício 02</span>
+                <h2>Lista de Usuários (JSON Placeholder)</h2>
+            </div>
+            <div class="card-body">
+                <p class="description">Carrega e mapeia uma coleção de usuários retornada em formato JSON.</p>
+                <ul id="userList" class="user-list">
+                    <!-- Usuários serão inseridos via JavaScript -->
+                </ul>
+                <button id="btnLoadUsers" class="btn btn-secondary">
+                    <i class="fa-solid fa-users"></i> Carregar Usuários
+                </button>
+            </div>
+        </section>
+
+        <!-- EXERCÍCIO 3: Campo de busca com filtro de API -->
+        <section class="card">
+            <div class="card-header">
+                <span class="badge">Exercício 03</span>
+                <h2>Filtro Dinâmico de Produtos</h2>
+            </div>
+            <div class="card-body">
+                <p class="description">Filtra os dados da API em tempo real conforme a digitação do usuário.</p>
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" id="searchInput" placeholder="Digite para filtrar por título...">
+                </div>
+                <div id="searchResults" class="grid-results">
+                    <!-- Resultados do filtro aparecerão aqui -->
+                </div>
+            </div>
+        </section>
+
+        <!-- EXERCÍCIO 4: Previsão do tempo baseada na localização -->
+        <section class="card">
+            <div class="card-header">
+                <span class="badge">Exercício 04</span>
+                <h2>Previsão do Tempo Geolocalizada</h2>
+            </div>
+            <div class="card-body">
+                <p class="description">Utiliza a API de Geolocalização do navegador para buscar o clima atual da sua posição.</p>
+                <div id="weatherDisplay" class="weather-box">
+                    <i class="fa-solid fa-location-dot"></i> Aguardando permissão de localização...
+                </div>
+                <button id="btnGetWeather" class="btn btn-accent">
+                    <i class="fa-solid fa-cloud-sun"></i> Obter Clima Atual
+                </button>
+            </div>
+        </section>
+
+        <!-- EXERCÍCIO 5: Sistema de Login com API Fictícia -->
+        <section class="card card-full-width">
+            <div class="card-header">
+                <span class="badge">Exercício 05</span>
+                <h2>Autenticação de Usuário (Mock API)</h2>
+            </div>
+            <div class="card-body">
+                <p class="description">Simula o envio de credenciais para uma API de autenticação fictícia com tratamento de resposta.</p>
+                
+                <form id="loginForm" class="login-form">
+                    <div class="form-group">
+                        <label for="loginEmail">E-mail</label>
+                        <input type="email" id="loginEmail" placeholder="usuario@exemplo.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="loginPassword">Senha</label>
+                        <input type="password" id="loginPassword" placeholder="••••••••" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fa-solid fa-right-to-bracket"></i> Entrar no Sistema
+                    </button>
+                </form>
+
+                <div id="loginFeedback" class="feedback-message"></div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2026 - Repositório de Exercícios do Desenvolvedor | Processo Seletivo</p>
+    </footer>
+
+</body>
+</html>
